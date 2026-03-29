@@ -1,0 +1,20 @@
+# Only track the tools we care about — ignore everything else
+refs/
+CONTEXT_ANCHOR.md
+*.save
+*.bin
+*.pyc
+__pycache__/
+
+# Exclude helper tools that aren't part of this project
+tools/ce_*.lua
+tools/paz_*.py
+tools/scan_*.py
+tools/extract_*.py
+tools/decode_*.py
+tools/deploy_*.py
+tools/verify_*.py
+tools/patch_*.py
+tools/inplace_*.py
+tools/find_*.py
+tools/scan_results.txt
