@@ -1,14 +1,16 @@
 # Only track the tools we care about — ignore everything else
 refs/
+extracted/
 CONTEXT_ANCHOR.md
 *.save
 *.bin
 *.pyc
+*.zip
 __pycache__/
+.DS_Store
 
-# Exclude helper tools that aren't part of this project
+# Exclude helper/diagnostic tools that aren't part of this project
 tools/ce_*.lua
-tools/paz_*.py
 tools/scan_*.py
 tools/extract_*.py
 tools/decode_*.py
@@ -17,4 +19,12 @@ tools/verify_*.py
 tools/patch_*.py
 tools/inplace_*.py
 tools/find_*.py
+tools/diagnose_*.py
+tools/diagnose_*.txt
+tools/save_parse.py
 tools/scan_results.txt
+
+# paz_parse.py IS tracked (dependency of build_armor_mod.py)
+# Use negation to un-ignore it from the paz_*.py pattern
+tools/paz_*.py
+!tools/paz_parse.py
